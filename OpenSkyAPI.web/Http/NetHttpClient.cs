@@ -21,7 +21,10 @@ public class NetHttpClient : IHTTPClient
 
   public Task<IResponse> DoRequest(IRequest request)
   {
-    throw new NotImplementedException();
+    if (request == null) return null;
+
+    using HttpRequestMessage 
+    
   }
 
   public void SetRequestTimeout(TimeSpan timeout)

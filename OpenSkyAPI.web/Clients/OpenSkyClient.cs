@@ -5,12 +5,19 @@ namespace OpenSkyAPI.web;
 
 public class OpenSkyClient : IOpenSkyClient
 {
+  private readonly string? _password;
+  private readonly string? _username;
+
   private OpenSkyClient()
   {
+    _username = null;
+    _password = null;
   }
 
-  private OpenSkyClient(string username, string password)
+  private OpenSkyClient(string username, string? password)
   {
+    _username = username;
+    _password = password;
   }
 
   public StateVectors GetStateVectors(LocalDateTime time, List<string> icao24TransponderAddresses)

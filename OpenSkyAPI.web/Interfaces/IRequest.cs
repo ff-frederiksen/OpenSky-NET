@@ -9,11 +9,7 @@ public interface IRequest
 
   Uri Endpoint { get; }
 
-  IDictionary<string, string> Headers { get; }
-
   IDictionary<string, string> Parameters { get; }
 
   HttpMethod Method { get; }
-
-  object? Body { get; set; }
 }
